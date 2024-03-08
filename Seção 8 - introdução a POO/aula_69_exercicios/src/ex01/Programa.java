@@ -8,15 +8,13 @@ public class Programa {
 
         Medida medida = new Medida();
 
-        double largura, altura;
-
         System.out.println("Digite a largura e altura do retângulo");
-        largura = entrada.nextDouble();
-        altura = entrada.nextDouble();
+        medida.largura = entrada.nextDouble();
+        medida.altura = entrada.nextDouble();
 
-        System.out.println(Medida.calcularArea(largura, altura));
-        System.out.println(Medida.calcularPerimetro(largura, altura));
-        System.out.println(Medida.calcularDiagonal(largura, altura));
+        System.out.println(medida.calcularArea());
+        System.out.println(medida.calcularPerimetro());
+        System.out.println(medida.calcularDiagonal());
 
         entrada.close();
     }

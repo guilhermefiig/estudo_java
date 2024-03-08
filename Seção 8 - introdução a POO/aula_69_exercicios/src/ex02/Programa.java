@@ -7,27 +7,23 @@ public class Programa {
         Scanner entrada = new Scanner(System.in);
 
         Funcionario funcionario = new Funcionario();
-
-        String nome;
-        double salarioBruto, porcentagem, imposto;
-
+        
         System.out.print("Nome: ");
-        nome = entrada.nextLine();
+        funcionario.nome = entrada.nextLine();
 
         System.out.print("Salário bruto: ");
-        salarioBruto = entrada.nextDouble();
+        funcionario.salarioBruto = entrada.nextDouble();
 
         System.out.print("Imposto: ");
-        imposto = entrada.nextDouble();
+        funcionario.imposto = entrada.nextDouble();
 
-        System.out.printf("%s, %.2f \n", nome, funcionario.salarioLiquido(salarioBruto, imposto));
+        System.out.printf("%s, %.2f \n", funcionario.nome, funcionario.salarioLiquido());
 
         System.out.print("Quantos % seu salario aumentou? ");
-        porcentagem = entrada.nextDouble();
+        funcionario.porcentagem = entrada.nextDouble();
 
 
-        double novoSalario = funcionario.aumentarSalario(salarioBruto, porcentagem, imposto);
-        System.out.printf("%s, %.2f", nome, novoSalario);
+        System.out.printf("%s, %.2f", funcionario.nome, funcionario.aumentarSalario());
 
         entrada.close();
     }

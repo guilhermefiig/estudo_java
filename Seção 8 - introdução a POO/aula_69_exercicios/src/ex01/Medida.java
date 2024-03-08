@@ -5,24 +5,20 @@ public class Medida {
     public double largura;
     public double altura;
 
-    public static double calcularArea(double largura, double altura){
+    public double calcularArea(){
 
-        return largura * altura;
-
+        return this.largura * this.altura;
     }
 
-    public static double calcularPerimetro(double largura, double altura){
+    public double calcularPerimetro(){
 
-        return 2 * (largura + altura);
-
+        return 2 * (this.largura + this.altura);
     }
 
-    public static double calcularDiagonal(double largura, double altura){
+    public double calcularDiagonal(){
 
-        double valores = Math.pow(largura, 2) + Math.pow(altura, 2);
+        double valores = Math.pow(this.largura, 2) + Math.pow(this.altura, 2);
 
         return Math.sqrt(valores);
-
     }
-
 }

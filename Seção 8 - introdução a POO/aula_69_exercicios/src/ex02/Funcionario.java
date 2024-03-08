@@ -3,19 +3,19 @@ package ex02;
 public class Funcionario {
 
     public String nome;
-    public double salarioBruto, imposto;
+    public double salarioBruto, imposto, porcentagem;
 
-    public double salarioLiquido(double salarioBruto, double imposto){
+    public double salarioLiquido(){
 
-        return salarioBruto - imposto;
+        return this.salarioBruto - this.imposto;
 
     }
 
-    public double aumentarSalario(double salarioBruto, double porcentagem, double imposto){
+    public double aumentarSalario(){
 
-        double aumento = salarioBruto * porcentagem / 100;
-        double novoSalario = salarioBruto + aumento;
-        return novoSalario - imposto;
+        double aumento = this.salarioBruto * this.porcentagem / 100;
+        this.salarioBruto += aumento;
+        return this.salarioLiquido();
 
     }
 }
