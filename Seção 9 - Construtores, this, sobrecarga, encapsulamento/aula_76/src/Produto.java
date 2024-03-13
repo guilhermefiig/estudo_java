@@ -4,12 +4,22 @@ public class Produto {
     public int quantidade;
     public double preco;
 
+    //construtor padrao
+    public Produto(){
+    }
+
+    //construtor1
     public Produto(String nome, int quantidade, double preco) {
 
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
+    }
+    //construtor2
+    public Produto(String nome, double preco) {
 
+        this.nome = nome;
+        this.preco = preco;
     }
 
     public double valorTotalEstoque(){

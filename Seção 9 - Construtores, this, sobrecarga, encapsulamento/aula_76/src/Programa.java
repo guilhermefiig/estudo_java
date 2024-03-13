@@ -10,16 +10,14 @@ public class Programa {
         System.out.print("Digite o preço: ");
         double preco = entrada.nextDouble();
 
-        System.out.print("Digite a quantidade: ");
-        int quantidade = entrada.nextInt();
+        //não digita quantidade em estoque
 
-        Produto produto = new Produto(nome, quantidade, preco);
-
+        Produto produto = new Produto(nome, preco);
 
         System.out.println("\nDados do produto: " + produto.toString());
 
         System.out.println("Digite uma quantidade de produtos para ser adicionado ao estoque: ");
-        quantidade = entrada.nextInt();
+        int quantidade = entrada.nextInt();
         produto.adicionarProduto(quantidade);
 
         System.out.println("\nDados atualizados: " + produto);
