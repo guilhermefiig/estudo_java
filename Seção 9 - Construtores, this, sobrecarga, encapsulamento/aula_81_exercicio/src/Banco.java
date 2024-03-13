@@ -50,7 +50,7 @@ public class Banco {
 
         int taxa = 5;
 
-        return (saldo -= valorSaque) + 5;
+        return saldo -= valorSaque + taxa;
     }
 
     public String toString(){

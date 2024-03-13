@@ -18,7 +18,17 @@ public class Programa {
 
         banco.setSaldo(depositoInicial);
 
-        
+        System.out.println(banco.toString());
+
+        System.out.print("Digite um valor que queira depositar em sua conta: ");
+        double valorDeposito = input.nextDouble();
+        banco.depositar(valorDeposito);
+
+        System.out.println(banco.toString());
+
+        System.out.println("Digite um valor que queira sacar (+ R$5 taxa): ");
+        double valorSaque = input.nextDouble();
+        banco.sacar(valorSaque);
 
         System.out.println(banco.toString());
 
