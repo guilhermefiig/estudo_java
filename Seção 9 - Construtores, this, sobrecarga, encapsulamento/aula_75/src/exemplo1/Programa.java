@@ -1,3 +1,5 @@
+package exemplo1;
+
 import java.util.Scanner;
 
 public class Programa {
