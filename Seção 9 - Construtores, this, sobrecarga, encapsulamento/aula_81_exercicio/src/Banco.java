@@ -1,17 +1,18 @@
 public class Banco {
     private int numeroConta;
     private String nomeTitutlar;
-    private double depositoInicial;
     private double saldo;
 
-    public Banco(){
+    public Banco(int numeroConta, String nomeTitutlar, double depositoInicial) {
+        this.numeroConta = numeroConta;
+        this.nomeTitutlar = nomeTitutlar;
+        depositar(depositoInicial);
     }
 
-    public Banco(int numeroConta, String nomeTitutlar, double depositoInicial){
+    public Banco(int numeroConta, String nomeTitutlar){
 
         this.numeroConta = numeroConta;
         this.nomeTitutlar = nomeTitutlar;
-        this.depositoInicial = depositoInicial;
     }
 
     public int getNumeroConta(){
@@ -29,9 +30,9 @@ public class Banco {
         this.nomeTitutlar = nomeTitutlar;
     }
 
-    public double getDepositoInicial(){
+    public double getSaldo() {
 
-        return depositoInicial;
+        return saldo;
     }
 
     public void setSaldo(double depositoInicial){
@@ -39,18 +40,18 @@ public class Banco {
         saldo = depositoInicial;
     }
 
-    public double depositar(double valorDeposito){
+    public void depositar(double valorDeposito){
 
         //saldo = depositoInicial;
 
-        return saldo += valorDeposito;
+        saldo += valorDeposito;
     }
 
-    public double sacar(double valorSaque){
+    public void sacar(double valorSaque){
 
         int taxa = 5;
 
-        return saldo -= valorSaque + taxa;
+        saldo -= valorSaque + taxa;
     }
 
     public String toString(){
