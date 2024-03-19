@@ -35,14 +35,7 @@ public class Banco {
         return saldo;
     }
 
-    public void setSaldo(double depositoInicial){
-
-        saldo = depositoInicial;
-    }
-
     public void depositar(double valorDeposito){
-
-        //saldo = depositoInicial;
 
         saldo += valorDeposito;
     }
