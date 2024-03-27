@@ -29,9 +29,7 @@ public class Programa {
                 if (vetor[i] < 0){
                     System.out.println(vetor[i]);
                 }
-
             }
-
         }else {
             System.out.println("Digite um número menor ou igual a 10");
         }
