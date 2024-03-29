@@ -43,7 +43,7 @@ public class Programa {
         }
 
         double porcentagem = (double) contIdades / vetorPessoas.length * 100;
-        System.out.printf("Porcentagem de pessoas com menos de 16 anos: %.1f\n", porcentagem);
+        System.out.printf("Porcentagem de pessoas com menos de 16 anos: %.1f \n", porcentagem);
 
         System.out.println("Pessoas com idade menor que 16 anos: ");
         for (int i = 0; i < vetorPessoas.length; i++){
